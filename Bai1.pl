@@ -1,0 +1,10 @@
+%facts
+parent(an,hung).
+parent(thuy,hung).
+parent(linh,an).
+parent(le,linh).
+parent(anh,thuy).
+parent(ngoc,le).
+%clauses
+to_tien(X,Y):-parent(X,Y).
+to_tien(X,Y):-parent(X,Z),parent(Z,Y).
